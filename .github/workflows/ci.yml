@@ -1,0 +1,29 @@
+name: My First GitHub Actions Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  hello:
+    name: First CI Job
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print message
+        run: echo "Hello from GitHub Actions!"
+
+      - name: Print date
+        run: date
+
+      - name: Print runner information
+        run: |
+          echo "Operating System:"
+          uname -a
+
+          echo "Current Directory:"
+          pwd
+
+          echo "Files:"
+          ls -la
